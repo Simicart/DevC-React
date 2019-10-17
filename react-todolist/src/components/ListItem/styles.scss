@@ -1,0 +1,16 @@
+.listItem {
+  position: relative;
+  background-color: #fff;
+  padding: 20px;
+}
+.listItem__content {
+  font-size: 18px;
+}
+.listItem__actions {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+}
+.listItem--complete {
+  border-left: 10px solid #27e48d;
+}
