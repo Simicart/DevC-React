@@ -1,0 +1,22 @@
+.todoList{
+    border: 1px solid gray;
+    border-radius: 20px;
+    height: 30px;
+    text-align: center;
+    margin: 5px 0;
+}
+
+.container{
+    width: 70%;
+    margin: auto;
+    margin-top: 50px;
+}
+
+.container .button{
+    height: 60px;
+    width: 150px;
+
+}
+
+
+
