@@ -1,0 +1,16 @@
+.app{
+  text-align: center;
+  width: 100%;
+}
+.app-logo{
+  width: 120px;
+  height: 120px;
+}
+.demo-form{
+  background-color: #fffeda;
+  width: 640px;
+  min-width: 640px;
+  min-height: 500px;
+  margin: 0 auto;
+  padding: 10px;
+}
