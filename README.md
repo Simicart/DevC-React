@@ -1,2 +1,8 @@
 # DevC-React
-Training PWA
+** Get started
+
+```
+yarn install
+yarn start
+```
+
