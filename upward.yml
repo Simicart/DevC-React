@@ -1,0 +1,35 @@
+status: response.status # [Go to 1]
+headers: response.headers # [Go to 1]
+body: response.body # [Go to 1]
+
+# 1
+response:
+  when:
+    - matches: request.url.pathname
+      pattern: '^/api/'
+      use: apiEnpoint # [Go to 2]
+    - matches: request.url.pathname
+      pattern: '^/'
+      use: reactApp # [Go to 3]
+  default: helloWorld # [Go to 4]
+
+# 2
+apiEnpoint:
+  target:
+    inline: 'https://devcreact.pwa-commerce.com/demoform.php'
+
+# 3
+reactApp:
+  target:
+    inline: 'http://localhost:3000/'
+
+# 4
+helloWorld:
+  inline:
+    status: 200
+    headers:
+      inline:
+        content-type:
+          inline: text/html
+    body:
+      inline: 'Hello World'
