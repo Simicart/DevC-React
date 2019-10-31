@@ -1,0 +1,31 @@
+input[type="text"]{
+	padding-top: 20px;
+	width: 100%;
+	font-size: 16px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+	border-bottom: 1px solid #dfdfdf;
+	background-color: transparent;
+}
+
+input[type="text"]:focus{
+	outline: none;
+}
+
+.form-row{
+	text-align: left;
+	margin: 10px 0px 25px;
+	position: relative;
+}
+
+.form-row label {
+    position: absolute;
+    top: 20px;
+    color: #939393;
+    transition: all ease-in-out 0.2s;
+}
+
+.form-row.focus label {
+    top: 0px;
+}

@@ -13,8 +13,11 @@ const DemoForm = (props) => {
         <div className={props.className || "form-wrap"}>
             <h1>Book a demo</h1>
             <form>
-                <Input className="name" name="name" label="Name" />
+				<Input className="name form-row" name="name" label="Name" />
+				<Input className="email form-row" name="email" label="Email" />
+				<Input className="job-title form-row" name="job-title" label="Job Title" />
                 <Channel />
+
             </form>
         </div>
     );
