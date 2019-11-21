@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react'
-import defaultStyle from './style.css'
+//import defaultStyle from './style.css'
+
 import classify from 'src/classify';
 // import Newsletter from './Newsletter';
 import Identify from "src/simi/Helper/Identify";
@@ -9,7 +10,7 @@ import Facebook from 'src/simi/BaseComponents/Icon/Facebook'
 import Twitter from 'src/simi/BaseComponents/Icon/Twitter'
 import Instagram from 'src/simi/BaseComponents/Icon/Instagram'
 import Expansion from 'src/simi/BaseComponents/Expansion'
-
+require('./footer.scss');
 const Footer = props => {
     const {classes} = props;
     const [isPhone, setIsPhone] = useState(window.innerWidth < 1024);
@@ -98,34 +99,35 @@ const Footer = props => {
     })
 
     return (
-        <div className={classes['footer-app']}>
+        <div className={'footer-app'}>
+          
             {/* <Newsletter classes={classes}/> */}
-            <div className={classes['footer-middle']}>
-                <div className={`container ${classes['col-mobile-pd-0']}`}>
-                    <div className={`row ${classes['app--flex']}`}>
-                        <div className={`${classes['col-custom-20pr']} ${classes['col-mobile-pd-0']}`}>
+            <div className={'footer-middle'}>
+                <div className={'container col-mobile-pd-0'}>
+                    <div className={`row app--flex`}>
+                        <div className={`col-custom-20pr col-mobile-pd-0`}>
                             {!isPhone ? <React.Fragment>
-                                <span className={classes["footer--custom_title"]}>
+                                <span className={'footer--custom_title'}>
                                 {Identify.__("Customer Services")}
                             </span>
                             {listPages(pageCustomerServices)}
-                            </React.Fragment>: <Expansion id={pagec1} title={Identify.__("Customer Services")} content={listPages(pageCustomerServices)} icon_color="#FFFFFF" handleExpand={(pagec1) => handleExpand(pagec1)} expanded={expanded} />}
+                            </React.Fragment>: <Expansion id={pagec1} title={Identify.__("Customer Services")} content={listPages(pageCustomerServices)} icon_color="#FFFFFF"  handleExpand={(pagec1) => handleExpand(pagec1)} expanded={expanded} />}
                         </div>
-                        <div className={`${classes['col-custom-20pr']} ${classes['col-mobile-pd-0']}`}>
+                        <div className={`col-custom-20pr col-mobile-pd-0`}>
                         {!isPhone ? <React.Fragment>
-                            <span className={classes["footer--custom_title"]}>
+                            <span className={'footer--custom_title'}>
                             {Identify.__("Our Policies")}
                         </span>
                         {listPages(pagePolicies)}
                             </React.Fragment>: <Expansion id={pagep2} title={Identify.__("Our Policies")} content={listPages(pagePolicies)} icon_color="#FFFFFF" handleExpand={(pagep2) => handleExpand(pagep2)} expanded={expanded} />}
                         </div>
-                        <div className={`${classes['col-custom-20pr']} hidden-xs`} />
-                        <div className={`${classes['col-custom-20pr']} hidden-xs`} />
-                        <div className={`${classes["col-custom-20pr"]} text-right`}>
-                            <span className={classes["footer--custom_title"]}>
+                        <div className={`col-custom-20pr hidden-xs`} />
+                        <div className={`col-custom-20pr hidden-xs`} />
+                        <div className={`col-custom-20pr text-right`}>
+                            <span className={'footer--custom_title'}>
                                 {Identify.__("Get in touch today on")}
                             </span>
-                            <ul className={classes["list-contact"]}>
+                            <ul className={'list-contact'}>
                                 <li>
                                     <a href={`tel:842466517968`}>84 - 24 - 6651 - 7968</a>
                                 </li>
@@ -134,7 +136,7 @@ const Footer = props => {
                                 </li>
                             </ul>
                             <span
-                                className={classes["footer--custom_title"]}
+                                className={'footer--custom_title'}
                                 style={{
                                     display: "block",
                                     marginTop: "40px"
@@ -142,15 +144,15 @@ const Footer = props => {
                             >
                                 {Identify.__("Connect")}
                             </span>
-                            <div className={classes["social__md-block"]}>
+                            <div className={'social__md-block'}>
                                 <a href='https://www.facebook.com/simicart' target="__blank">
-                                    <Facebook className={classes["facebook-icon"]} style={{width: "50px", height: "50px"}} />
+                                    <Facebook className={'facebook-icon'} style={{width: "50px", height: "50px"}} />
                                 </a>
                                 <a href='https://twitter.com/SimiCart' target="__blank">
-                                    <Twitter className={classes["twitter-icon"]} style={{width: "50px", height: "50px"}} />
+                                    <Twitter className={'twitter-icon'} style={{width: "50px", height: "50px"}} />
                                 </a>
                                 <a href='https://www.instagram.com/simicart.official/' target="__blank">
-                                    <Instagram className={classes["instagram-icon"]} style={{width: "50px", height: "50px"}} />
+                                    <Instagram className={'instagram-icon'} style={{width: "50px", height: "50px"}} />
                                 </a>
                             </div>
                         </div>
@@ -162,4 +164,4 @@ const Footer = props => {
         </div>
     )
 }
-export default classify(defaultStyle)(Footer)   
+export default Footer   

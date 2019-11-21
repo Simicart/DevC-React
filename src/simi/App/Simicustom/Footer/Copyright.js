@@ -6,10 +6,10 @@ const Copyright = props => {
     const {isPhone, classes} = props;
     let copyright = `${new Date().getFullYear()} ${Identify.__('Simicart')}`;
     return (
-        <div className={classes["app-copyright"]}>
+        <div className={'app-copyright'}>
             <div className="container">
-                <div className={`row ${classes['pd-tb-15']}`}>
-                    <div className={`col-xs-6 ${classes["app--flex"]}`} style={{ frontSize: '13px'}}>
+                <div className={`row pd-tb-15`}>
+                    <div className={`col-xs-6 app--flex`} style={{ frontSize: '13px'}}>
                         <span>
                             &copy; {copyright}
                         </span>
