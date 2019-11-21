@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react'
 //import defaultStyle from './style.css'
 
 import classify from 'src/classify';
-// import Newsletter from './Newsletter';
+import Newsletter from './Newsletter';
 import Identify from "src/simi/Helper/Identify";
 import {Link} from 'react-router-dom';
 import Copyright from './Copyright';
@@ -101,7 +101,7 @@ const Footer = props => {
     return (
         <div className={'footer-app'}>
           
-            {/* <Newsletter classes={classes}/> */}
+             <Newsletter classes={classes}/> 
             <div className={'footer-middle'}>
                 <div className={'container col-mobile-pd-0'}>
                     <div className={`row app--flex`}>
