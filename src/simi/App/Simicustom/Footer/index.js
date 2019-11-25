@@ -64,6 +64,97 @@ const Footer = props => {
         }
     ];
     
+    const helpPages = [
+        {
+            id: 1,
+            link: "#",
+            title: "Contact us"
+        },
+        {
+            id: 2,
+            link: "#",
+            title: "Store Location"
+        },
+        {
+            id: 3,
+            link: "#",
+            title: "Delivery"
+        },
+        {
+            id: 4,
+            link: "#",
+            title: "Return"
+        }
+    ];
+
+    const siteInfoPages = [
+        {
+            id: 1,
+            link: "#",
+            title: "Terms & Conditions"
+        },
+        {
+            id: 2,
+            link: "#",
+            title: "Privacy Policy"
+        },
+        {
+            id: 3,
+            link: "#",
+            title: "Cookie Policy"
+        },
+        {
+            id: 4,
+            link: "#",
+            title: "Contact us"
+        }
+    ];
+
+    const companyPages = [
+        {
+            id: 1,
+            link: "#",
+            title: "Careers"
+        },
+        {
+            id: 2,
+            link: "#",
+            title: "Licensing"
+        },
+        {
+            id: 3,
+            link: "#",
+            title: "Affiliates"
+        },
+        {
+            id: 4,
+            link: "#",
+            title: "Investor Relations"
+        }
+    ];
+
+    const contactPages = [
+        {
+            id: 1,
+            link: "#",
+            title: "Careers"
+        },
+        {
+            id: 2,
+            link: "#",
+            title: "Licensing"
+        },
+        {
+            id: 3,
+            link: "#",
+            title: "Affiliates"
+        },
+        {
+            id: 4,
+            link: "#",
+            title: "Investor Relations"
+        }
+    ];
     const listPages = pages => {
       
         let result = null;
@@ -102,40 +193,49 @@ const Footer = props => {
         <div className={'footer-app'}>
           
              <Newsletter classes={classes}/> 
+             <hr className={'hrClass'}/>
             <div className={'footer-middle'}>
                 <div className={'container col-mobile-pd-0'}>
                     <div className={`row app--flex`}>
                         <div className={`col-custom-20pr col-mobile-pd-0`}>
                             {!isPhone ? <React.Fragment>
                                 <span className={'footer--custom_title'}>
-                                {Identify.__("Customer Services")}
+                                {Identify.__("Help")}
                             </span>
-                            {listPages(pageCustomerServices)}
-                            </React.Fragment>: <Expansion id={pagec1} title={Identify.__("Customer Services")} content={listPages(pageCustomerServices)} icon_color="#FFFFFF"  handleExpand={(pagec1) => handleExpand(pagec1)} expanded={expanded} />}
+                            {listPages(helpPages)}
+                            </React.Fragment>: <Expansion id={pagec1} title={Identify.__("Help")} content={listPages(helpPages)} icon_color="#FFFFFF"  handleExpand={(pagec1) => handleExpand(pagec1)} expanded={expanded} />}
                         </div>
                         <div className={`col-custom-20pr col-mobile-pd-0`}>
                         {!isPhone ? <React.Fragment>
                             <span className={'footer--custom_title'}>
-                            {Identify.__("Our Policies")}
+                            {Identify.__("Site Info")}
                         </span>
-                        {listPages(pagePolicies)}
-                            </React.Fragment>: <Expansion id={pagep2} title={Identify.__("Our Policies")} content={listPages(pagePolicies)} icon_color="#FFFFFF" handleExpand={(pagep2) => handleExpand(pagep2)} expanded={expanded} />}
+                        {listPages(siteInfoPages)}
+                            </React.Fragment>: <Expansion id={pagep2} title={Identify.__("Site Info")} content={listPages(siteInfoPages)} icon_color="#FFFFFF" handleExpand={(pagep2) => handleExpand(pagep2)} expanded={expanded} />}
                         </div>
-                        <div className={`col-custom-20pr hidden-xs`} />
+                        <div className={`col-custom-20pr col-mobile-pd-0`}>
+                        {!isPhone ? <React.Fragment>
+                            <span className={'footer--custom_title'}>
+                            {Identify.__("Company")}
+                        </span>
+                        {listPages(companyPages)}
+                            </React.Fragment>: <Expansion id={pagep2} title={Identify.__("Company")} content={listPages(companyPages)} icon_color="#FFFFFF" handleExpand={(pagep2) => handleExpand(pagep2)} expanded={expanded} />}
+                        </div>
+                        {/* <div className={`col-custom-20pr hidden-xs`} /> */}
                         <div className={`col-custom-20pr hidden-xs`} />
                         <div className={`col-custom-20pr text-right`}>
                             <span className={'footer--custom_title'}>
-                                {Identify.__("Get in touch today on")}
+                                {Identify.__("Contact")}
                             </span>
                             <ul className={'list-contact'}>
                                 <li>
-                                    <a href={`tel:842466517968`}>84 - 24 - 6651 - 7968</a>
+                                    <a href={`tel:842466517968`}>+88 089 090 000</a>
                                 </li>
                                 <li>
-                                    <a href={`mailto:Support@simicart.com `}>Support@simicart.com</a>
+                                    <a href={`mailto:Support@simicart.com `}>simicart@gmail.com</a>
                                 </li>
                             </ul>
-                            <span
+                            {/* <span
                                 className={'footer--custom_title'}
                                 style={{
                                     display: "block",
@@ -143,7 +243,7 @@ const Footer = props => {
                                 }}
                             >
                                 {Identify.__("Connect")}
-                            </span>
+                            </span> */}
                             <div className={'social__md-block'}>
                                 <a href='https://www.facebook.com/simicart' target="__blank">
                                     <Facebook className={'facebook-icon'} style={{width: "50px", height: "50px"}} />
@@ -160,7 +260,7 @@ const Footer = props => {
                 </div>
 
             </div>
-            <Copyright isPhone={isPhone} classes={classes}/>
+            {/* <Copyright isPhone={isPhone} classes={classes}/> */}
         </div>
     )
 }

@@ -21,10 +21,14 @@ const Newsletter = props => {
                 <div className={'newsletter__text'}>
                     <h4 className={'newsletter-title'}>
                         {Identify.__(
-                            "Stay up to date and never miss an offer! Sign up today"
+                            "Subscribe Newsletter"
                         )}
                     </h4>
-                    <span className={'arrow-triangle'} />
+                    <span>
+                    {Identify.__(
+                            "Lastest news and get early access to collection previews"
+                        )}
+                    </span>
                 </div>
                 <SimiMutation mutation={CUSTOMER_NEWSLETTER_UPDATE}>
                     {(updateCustomer, {loading, data}) => {
@@ -42,7 +46,7 @@ const Newsletter = props => {
                                     // label={Identify.__("Newsletter")}
                                     type="email"
                                     name="email"
-                                    
+                                    class={'.newsletter__form input'}
                                     placeholder={Identify.__("Enter email address")}
                                     id="harlow-newsletter"
                                     defaultValue={email}

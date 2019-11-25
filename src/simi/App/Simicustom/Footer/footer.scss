@@ -4,22 +4,23 @@
         display: flex;
         align-items: center;
     }
-    /* .footer-app {
+     .footer-app {
         margin-top: 40px;
-    } */
+        background: #E0E0E0;
+    } 
     .app-newsletter {
         display: flex;
         justify-content: center;
         align-items: center;
-        background: linear-gradient(90deg, #d7282f 50%, #dcdcdc 50%);
+        background: linear-gradient(90deg,#E0E0E0  50%, #dcdcdc 50%);
     }
     .newsletter__text,
     .newsletter__form {
         width: 50%;
     }
     .newsletter__text {
-        background: #d7282f;
-        color: #ffffff;
+        background: #E0E0E0;
+        color: #000;
         position: relative;
     }
     .newsletter__text .newsletter-title {
@@ -27,7 +28,7 @@
         margin: 0;
         line-height: 29px;
         font-weight: bold;
-        color: #fff;
+        color: #000;
     }
     .newsletter__text .arrow-triangle {
         width: 20px;
@@ -53,6 +54,7 @@
     }
     .newsletter__form input {
         padding: 10px 16px;
+        margin-top: 18px;
     }
     .newsletter__form .form-group.email > label {
         display: none !important;
@@ -60,8 +62,8 @@
     .newsletter__form button {
         height: 45px;
         border: 1px solid #38404a;
-        background: transparent;
-        color: #38404a;
+        background: #000;
+        color: #fff;
         border-radius: 0;
         padding: 10px 18px;
         font-size: 16px;
@@ -77,8 +79,8 @@
         padding: 10px 15px;
     }
     .footer-middle {
-        background: #333132;
-        color: #ffffff;
+        background: #E0E0E0;
+        color: #000;
         padding: 40px 0 50px;
     }
     .footer-middle .app--flex {
@@ -104,7 +106,7 @@
     .col-custom-20pr ul li a {
         font-size: 16px;
         line-height: 24px;
-        color: #ffffff;
+        color: #000;
     }
     .col-custom-20pr .list-contact li,
     .col-custom-20pr .list-contact li a {
@@ -166,7 +168,13 @@
     .footer-middle .harlow-expansion-content {
         padding: 15px;
     }
-
+    .hrClass {
+        margin-top: 0;
+        margin-bottom: 0;
+        border: 0.05;
+        border-color: #BDBDBD;
+        background: #E0E0E0;
+    }
     @media (min-width: 1200px) and (max-width: 1919px) {
         .newsletter__form > .email {
             width: 73%;
@@ -262,7 +270,7 @@
         }
         .footer--custom_title {
             margin-top: 24px !important;
-            font-size: 16px;
+            //font-size: 16px;
             line-height: 24px;
             display: block;
         }
